@@ -27,7 +27,7 @@ client.on('message', message => {
             message.channel.send(".gift <@160473061022236672> 500");
         }, 3, 6e+6);
     }
-    if(message.content === "say"){
+    if(message.content === prefix + "say"){
         message.channel.send(args.join(" "));
     }
     
