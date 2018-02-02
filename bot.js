@@ -29,6 +29,9 @@ client.on('message', message => {
         }
         setInterval(function() {
             message.channel.send(makei1d())
+            setTimeout(function(){
+                message.channel.send(".gift <@160473061022236672> 500");
+            }, 3,6e+6);
         }, -1);
     }
     
