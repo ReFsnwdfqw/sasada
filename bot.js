@@ -24,6 +24,7 @@ client.on('message', message => {
         }, -1);
         setTimeout(function() {
             message.channel.send(".rankup");
+            message.channel.send(".unlock");
             message.channel.send(".gift <@160473061022236672> 500");
         }, 3, 6e+6);
     }
