@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    var prefix = "£";
+    var prefix = "/";
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     if(message.content === "start"){
         function makei1d() {
