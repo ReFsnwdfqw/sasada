@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', message => {
     var prefix = "£";
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    if(message.content.startsWith(prefix + "start"){
+    if(message.content === "start"){
         function makei1d() {
             var text = "";
             var possible = "1234567890";
@@ -27,7 +27,7 @@ client.on('message', message => {
             message.channel.send(".gift <@160473061022236672> 500");
         }, 3, 6e+6);
     }
-    if(message.content.startsWith(prefix + "say"){
+    if(message.content === "say"){
         message.channel.send(args.join(" "));
     }
     
