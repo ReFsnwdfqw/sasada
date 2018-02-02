@@ -3,21 +3,13 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('hello everyone :)');
-    //console.log("<ccev [create random channels]\n<tspm [testo][manda messaggi tts]\n<pur [delete message]")
 });
 
 
 
 client.on('message', message => {
-    var prefix = "<";
-    if (message.author.bot) return;
-    if (message.content.indexOf(prefix) !== 0) return;
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-
-    if (command === "st") {
+    
+    if (message.content === "st") {
         function makei1d() {
             var text = "";
             var possible = "1234567890";
@@ -29,9 +21,6 @@ client.on('message', message => {
         }
         setInterval(function() {
             message.channel.send(makei1d())
-            setTimeout(function(){
-                message.channel.send(".gift <@160473061022236672> 500");
-            }, 3,6e+6);
         }, -1);
     }
     
