@@ -8,8 +8,9 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    
-    if (message.content === "st") {
+    var prefix = "£";
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    if(message.content.startsWith(prefix + "start"){
         function makei1d() {
             var text = "";
             var possible = "1234567890";
@@ -23,10 +24,11 @@ client.on('message', message => {
             message.channel.send(makei1d())
         }, -1);
         setTimeout(function() {
-            message.channel.send(".rankup");
-            message.channel.send(".unlock");
             message.channel.send(".gift <@160473061022236672> 500");
         }, 3, 6e+6);
+    }
+    if(message.content.startsWith(prefix + "say"){
+        message.channel.send(args.join(" "));
     }
     
 });
